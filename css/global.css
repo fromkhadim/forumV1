@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+.clientell_description__avatar {
+    position: absolute;
+    left: 36%;
+    transform: translateX(-30%);
+    bottom: 4px;
+    /* A ajustez selon le besoin */
+}
+
+.custumers {
+    position: absolute;
+    left: 47%;
+    transform: translateX(-40%);
+    bottom: 20px;
+
+}
+
+.description__bouton {
+    position: absolute;
+    left: 12%;
+    transform: translateX(-40%);
+    bottom: 50px;
+}
+
+
+.livre {
+    position: absolute;
+    left: 287%;
+    transform: translateX(-39%);
+    bottom: -50px;
+
+}
+
+.liste {
+    position: absolute;
+    left: 48%;
+    transform: translateX(-40%);
+    bottom: 390px;
+}
+
+.video__expo {
+
+    position: absolute;
+    left: 86%;
+    transform: translateX(-40%);
+    bottom: -5px;
+}
+
+.video__collection {
+    position: absolute;
+    left: 75%;
+    transform: translateX(-40%);
+    bottom: 192px;
+}
+
+
+
+.video__lecture {
+    position: absolute;
+    left: 45%;
+    transform: translateX(-40%);
+    bottom: 60px;
+}
+
+.start {
+    position: absolute;
+    left: 25%;
+    transform: translateX(-40%);
+    bottom: -40px;
+}

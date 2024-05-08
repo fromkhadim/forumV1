@@ -1,0 +1,17 @@
+.hero-overview {
+  background: url("../../assets/background.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 350px;
+  width: 650px;
+  margin-bottom: 20px;
+
+}
+
+.hero-overview__title {
+  position: absolute;
+  font-family: var(--roboto);
+  color: white;
+  font-weight: 500;
+  font-size: 45px;
+}

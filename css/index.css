@@ -1,0 +1,87 @@
+.inscription_title {
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+    color: white;
+}
+
+/* Styles pour le formulaire d'inscription */
+.page_formulaire {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: navy;
+}
+
+.inscription_form {
+    width: 300px;
+    /* Largeur du formulaire */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.inscription_form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.inscription_form input[type="text"],
+.inscription_form input[type="login"],
+.inscription_form input[type="email"],
+.inscription_form input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.validation_inscription button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.validation_inscription button:hover {
+    background-color: #45a049;
+}
+
+/*form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+
+}
+
+
+
+
+.inscription_form {
+
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.label {
+    width: 200px;
+    display: block;
+    text-align: left;
+    margin-right: 10 px;
+}
+
+.input {
+    width: 200px;
+    text-align: left;
+    margin-right: 10 px;
+}

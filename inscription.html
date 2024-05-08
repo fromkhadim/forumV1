@@ -6,86 +6,108 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>INSCRIPTION</title>
-  <link rel="stylesheet" href="fontawesome-free-6.5.1-web/css/all.min.css">
-  <link rel="stylesheet" href="css/inscription.css">
+  <link rel="stylesheet" href="./css/inscription.css">
 </head>
 
 <body>
-  <div class="page_formulaire">
-    <main>
-      <div class="formulaire__inscription" id="parametres">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-2">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Compte Utilisateurs</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">S'enregistrer<span class="sr-only"></span></a></li>
+          <li><a href="#">Se Connecter</a></li>
+        </ul>
+
+        <form class="navbar-form navbar-right" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default">Rechercher</button>
+        </form>
+
+      </div>
+
+    </div>
+  </nav>
+
+  <main>
+
+    <div class="container col-md-8 col-md-offset-2 " id="parametres">
+      <div class="inscription_title">
+        <h1>INSCRIPTION</h1>
+      </div>
+      <div class="col-md-8 col-md-offset-2">
 
         <form action="inscription.php" method="POST" id="inscription">
-          <div class="inscription_form">
-
-            <div class="inscription_title">
-              <h2>INSCRIVEZ-VOUS!</h2>
-            </div>
-            <div class="champ">
+          <fieldset>
+            <div class="form-group">
               <label for="prenom">PRENOM</label>
-              <input type="text" id="prenom" placeholder="Entrez votre prénom ici" name="prenom">
+              <input type="text" id="prenom" class="form-control" name="prenom">
               <i class="fas fa-check-circle"></i>
               <i class="fas fa-exclamation"></i>
               <small>Message d'erreur</small>
             </div>
-
-            <div class="champ">
+            <div class="form-group">
               <label for="nom">NOM</label>
-              <input type="text" id="nom" placeholder="Entrez votre nom ici" name="nom">
+              <input type="text" id="nom" class="form-control" name="nom">
               <i class="fas fa-check-circle"></i>
               <i class="fas fa-exclamation"></i>
-              <small>Message d'erreur</small>
+              <small> Message d'erreur</small>
             </div>
-
-            <div class="champ">
+            <div class="form-group">
               <label for="email">EMAIL</label>
-              <input type="email" id="email" placeholder="Entrez votre email ici" name="email">
+              <input type="email" id="email" class="form-control" name="email">
               <i class="fas fa-check-circle"></i>
               <i class="fas fa-exclamation"></i>
               <small>Message d'erreur</small>
             </div>
-
-            <div class="champ">
+            <div class="form-group">
               <label for="login">LOGIN</label>
-              <input type="text" id="login" placeholder="Entrez votre login ici" name="login">
+              <input type="text" id="login" class="form-control" name="login">
               <i class="fas fa-check-circle"></i>
               <i class="fas fa-exclamation"></i>
               <small>Message d'erreur</small>
             </div>
-
-            <div class="champ">
+            <div class="form-group">
               <label for="password">MOT DE PASSE</label>
-              <input type="password" id="password" placeholder="Entrez votre mot de passe ici" name="password">
+              <input type="password" id="password" class="form-control" name="password">
               <i class="fas fa-check-circle"></i>
               <i class="fas fa-exclamation"></i>
               <small>Message d'erreur</small>
             </div>
-
-            <div class="champ">
-              <label for="password_bis">MOT DE PASSE</label>
-              <input type="password" id="password_bis" placeholder="Confirmez votre mot de passe ici"
-                name="password_bis">
+            <div class="form-group">
+              <label for="password_bis"> CONFIRMATION MOT DE PASSE</label>
+              <input type="password" id="password_bis" class="form-control" name="password_bis">
               <i class="fas fa-check-circle"></i>
               <i class="fas fa-exclamation"></i>
               <small>Message d'erreur</small>
             </div>
             <div class="validation_inscription">
-              <button type="submit" name="envoyer"><i class="fas fa-user-plus"></i> envoyer</button>
+              <button type="submit" class="btn btn-primary" name="envoyer"><i class="fas fa-user-plus"></i> S'INSCRIRE
+              </button>
             </div>
-            <div class="">
-              <p>Déjà un compte? <a href="connection.html"> Se connecter</a></p>
-            </div>
-          </div>
+          </fieldset>
         </form>
-        <script src="js/script.js"> </script>
+        <div class="Els">
+          <p>Déjà un compte? <a href="connection.html"> Se connecter</a></p>
+        </div>
       </div>
-    </main>
-  </div>
+    </div>
 
+  </main>
 
+  <script src="js/script.js"> </script>
 
 </body>
-
-
 
 </html>
