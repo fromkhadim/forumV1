@@ -23,10 +23,25 @@ html {
     margin: 0;
 }
 
+/*==========================================================Style de mon logo pers=================================================*/
+.logopers {
+    position: absolute;
+    margin-top: 500px;
+}
+
+/*==========================================================Style image background degradé======================================================*/
+.hero-overview {
+    background: url("../../assets/background.png");
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: -370px;
+}
+
 /*============================================================Style du contour des données du formulaire=====================================*/
 fieldset {
     /* border: 1px solid #c0c0c0;*/
-    margin: 0 2px;
+    margin: 02px;
     padding: 0.35em 0.625em 0.75em
 }
 
@@ -52,8 +67,8 @@ label {
     margin-bottom: 5px;
     font-weight: 750;
     font-size: 100%;
-    margin-left: 20px;
-    color: white
+    margin-left: 26px;
+    color: blue
 }
 
 /*=============================================================Style du bas du formulaire("Deja un comte?")======================================*/
@@ -91,6 +106,7 @@ fieldset {
     padding: 6px 16px;
     font-size: 30px;
     line-height: 0;
+    margin-left: 24px;
     color: white;
     background-color: transparent;
     background-image: none;
@@ -5257,7 +5273,7 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
 @media (min-width:768px) {
     .navbar-collapse {
         width: auto;
-        border-top: 0;
+        border-top: 15;
         box-shadow: none
     }
 
