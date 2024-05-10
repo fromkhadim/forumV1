@@ -35,14 +35,15 @@ html {
     position: absolute;
     background-repeat: no-repeat;
     background-size: contain;
-    margin-left: -370px;
+    margin-left: -400px;
 }
 
 /*============================================================Style du contour des données du formulaire=====================================*/
 fieldset {
     /* border: 1px solid #c0c0c0;*/
-    margin: 02px;
-    padding: 0.35em 0.625em 0.75em
+    margin: 0px;
+    padding: 0.35em 0.625em 0.75em;
+    margin-top: 0px;
 }
 
 /*===========================================================Style du corps du formulaire==================================================*/
@@ -51,30 +52,48 @@ body {
     font-size: 13px;
     line-height: 1.846;
     color: #666666;
+    margin-left: 15px;
+    margin-top: 30px;
     background-color: black
 }
 
 /*=======================================================Style message d'erreur==================================================================*/
 small {
-    font-size: 80%;
+    font-size: 50%;
 
+}
+
+/*================================================================Style des labels du formulaire===============================================*/
+.inscription_title,
+label[for="prenom"],
+label[for="nom"],
+label[for="email"],
+label[for="login"],
+label[for="password"],
+label[for="password_bis"] {
+    margin-top: 10px;
+    padding-top: 2px;
+    /* Vous pouvez ajuster cette valeur selon vos besoins */
 }
 
 /*================================================================Style des labels du formulaire================================================*/
 label {
     display: inline-block;
     max-width: 100%;
-    margin-bottom: 5px;
-    font-weight: 750;
+    margin-bottom: 0px;
+    font-weight: 700;
     font-size: 100%;
-    margin-left: 26px;
-    color: blue
+    margin-left: 20px;
+    color: blue;
+    margin-top: 5px;
+    /* Ajoute un espace au-dessus des balises label */
 }
 
 /*=============================================================Style du bas du formulaire("Deja un comte?")======================================*/
 .Els {
     text-align: center;
-    color: white
+    color: white;
+    margin-top: 0px;
 }
 
 
@@ -95,14 +114,19 @@ fieldset {
     padding: 0;
     margin: 0;
     border: 0;
-
+    align-items: center;
+    margin-left: 500;
 }
 
 /*========================================Style des champs d'entrée du formulaire============================================================*/
 .form-control {
     display: block;
     width: 88%;
-    height: 15px;
+    margin-top: 10px;
+    /* Espace au-dessus du champ de formulaire */
+    margin-bottom: -25px;
+    /* Espace entre les champs de formulaire */
+    height: 20px;
     padding: 6px 16px;
     font-size: 30px;
     line-height: 0;
@@ -113,7 +137,7 @@ fieldset {
     border: 1px solid transparent;
     border-radius: 3px;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
 /*=======================Style des messages d'erreur dans les champs du formulaire ( les SMALL)===========================================================*/
@@ -130,7 +154,8 @@ small,
 
 /*================================================Style entre les labels et input du formulaire==================================================*/
 .form-group {
-    margin-bottom: -2px;
+    margin-bottom: -5px;
+
 
 }
 
@@ -145,6 +170,7 @@ small,
 .col-md-8 {
 
     color: #fff;
+
 
 
 }
@@ -427,7 +453,8 @@ th {
     }
 
     .navbar {
-        display: none
+        display: none;
+
     }
 
     .btn>.caret,
@@ -1735,8 +1762,8 @@ h1,
 .h1 {
     font-size: 50px;
     color: white;
-    margin-top: 0px;
-    margin-left: 176px;
+    margin-top: 40px;
+    margin-left: 180px;
     text-align: left;
     /*text-align: center;*/
 }
@@ -4038,10 +4065,12 @@ fieldset[disabled] .btn-default.focus {
     background-color: #444444
 }
 
+/*=========================================================Style du bouton S'INSCRIRE en bas du formulaire==============================================================================*/
 .btn-primary {
     color: #ffffff;
     background-color: #2196f3;
-    border-color: transparent
+    border-color: transparent;
+    margin-top: 50px;
 }
 
 .btn-primary:focus,
@@ -5253,7 +5282,7 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
 
 @media (min-width:768px) {
     .navbar-header {
-        float: left
+        float: left;
     }
 }
 
@@ -5263,7 +5292,7 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
     overflow-x: visible;
     border-top: 1px solid transparent;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    -webkit-overflow-scrolling: touch
+    -webkit-overflow-scrolling: touch;
 }
 
 .navbar-collapse.in {
@@ -5274,9 +5303,10 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
     .navbar-collapse {
         width: auto;
         border-top: 15;
-        box-shadow: none
+        box-shadow: none;
     }
 
+    /*==========================================Style contenu barre de navigation (Sauf'Compte Utilisateur')=====================================*/
     .navbar-collapse.collapse {
         display: block !important;
         height: auto !important;
@@ -5306,7 +5336,7 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
 
 .navbar-fixed-top .navbar-collapse,
 .navbar-fixed-bottom .navbar-collapse {
-    max-height: 340px
+    max-height: 340px;
 }
 
 @media (max-device-width:480px) and (orientation:landscape) {
@@ -5366,12 +5396,13 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
     }
 }
 
+/*=================================Style du contenu de la barre de navigation (Compte Utilisateur)====================================================*/
 .navbar-brand {
     float: left;
     height: 64px;
     padding: 20.5px 15px;
     font-size: 17px;
-    line-height: 23px
+    line-height: 23px;
 }
 
 .navbar-brand:hover,
@@ -5380,9 +5411,10 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
 }
 
 .navbar-brand>img {
-    display: block
+    display: block;
 }
 
+/*=================================Style du contenu de la barre de navigation ===============================================================*/
 @media (min-width:768px) {
 
     .navbar>.container .navbar-brand,
@@ -5419,6 +5451,7 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
     margin-top: 4px
 }
 
+/*=============================================Style du menu d'authentification ==============================================================*/
 @media (min-width:768px) {
     .navbar-toggle {
         display: none
@@ -5471,6 +5504,7 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
         float: left
     }
 
+    /*======================================================Style contenu barre de navigation====================================================*/
     .navbar-nav>li>a {
         padding-top: 20.5px;
         padding-bottom: 20.5px
@@ -5746,11 +5780,22 @@ fieldset[disabled] .navbar-default .btn-link:focus {
     color: #cccccc
 }
 
+/*=======================================================================Style de la barre de navigation=======================================================================*/
 .navbar-inverse {
+    position: fixed;
     background-color: #2196f3;
-    border-color: transparent
+    top: 0;
+    margin-left: 0;
+    width: 100%;
+    border-color: transparent;
+    /*right: 0;*/
+    left: -5;
+    /*deplace la barre de navigation vers la gauche*/
+    /* bottom: 0;  deplace vers le haut*/
+    /*height: 100%; definit la hauteur*/
 }
 
+/*=======================================================================Style du mot 'Compte Utilisateur'de la barre de navigation=======================================================================*/
 .navbar-inverse .navbar-brand {
     color: #b2dbfb
 }
