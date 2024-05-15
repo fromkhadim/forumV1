@@ -24,7 +24,7 @@ html {
 }
 
 /*==========================================================Style de mon logo pers=================================================*/
-.logopers {
+.logopers1 {
     position: absolute;
     margin-top: 500px;
 }
@@ -53,7 +53,7 @@ body {
     line-height: 1.846;
     color: #666666;
     margin-left: 15px;
-    margin-top: 30px;
+    margin-top: 70px;
     background-color: black
 }
 
@@ -80,20 +80,22 @@ label[for="password_bis"] {
 label {
     display: inline-block;
     max-width: 100%;
-    margin-bottom: 0px;
+    margin-bottom: -15px;
     font-weight: 700;
     font-size: 100%;
     margin-left: 20px;
+    top: 30px;
     color: blue;
-    margin-top: 5px;
+
     /* Ajoute un espace au-dessus des balises label */
 }
 
-/*=============================================================Style du bas du formulaire("Deja un comte?")======================================*/
+/*=============================================================Style du bas du formulaire("Deja un compte?")======================================*/
 .Els {
     text-align: center;
     color: white;
-    margin-top: 0px;
+    margin-bottom: 10px;
+
 }
 
 
@@ -154,7 +156,7 @@ small,
 
 /*================================================Style entre les labels et input du formulaire==================================================*/
 .form-group {
-    margin-bottom: -5px;
+    margin-bottom: -14px;
 
 
 }
@@ -166,11 +168,15 @@ small,
     border-color: transparent
 }
 
+.smsflash {
+    color: #fff;
+}
+
 /*====================================================Style du fond d'ecran des champs du formulaire ===========================================================*/
 .col-md-8 {
 
     color: #fff;
-
+    margin: -32px;
 
 
 }
@@ -1706,14 +1712,15 @@ h6 .small,
     color: #bbbbbb
 }
 
+/*===============================================STYLE DE H1===========================================================*/
 h1,
 .h1,
 h2,
 .h2,
 h3,
 .h3 {
-    margin-top: 20px;
-    margin-bottom: 11.5px;
+    margin-top: 2px;
+    margin-bottom: -45px;
 
 }
 
@@ -1762,7 +1769,7 @@ h1,
 .h1 {
     font-size: 50px;
     color: white;
-    margin-top: 40px;
+    margin-top: -40px;
     margin-left: 180px;
     text-align: left;
     /*text-align: center;*/
@@ -2178,6 +2185,7 @@ pre code {
     margin-left: auto
 }
 
+/*===============================================Style deu footer================================================================*/
 .row {
     margin-right: -15px;
     margin-left: -15px
@@ -2705,10 +2713,15 @@ pre code {
         float: left
     }
 
+    /*FOOTER======================================Style pour position de la liste REGLES DU FORUM==========================*/
     .col-md-12 {
-        width: 100%
+        width: 45%;
+        margin-left: 100px;
+        top: 50px;
+        background-color: white
     }
 
+    /*FOOTER==============================================================================================================*/
     .col-md-11 {
         width: 91.66666667%
     }
@@ -2729,10 +2742,14 @@ pre code {
         width: 58.33333333%
     }
 
+    /*FOOTER======================================Style pour position de la liste SUIVER-NOUS===============================================*/
     .col-md-6 {
-        width: 50%
+        width: 20%;
+        top: 50px;
+        background-color: white
     }
 
+    /*================================================================================================================*/
     .col-md-5 {
         width: 41.66666667%
     }
@@ -2874,7 +2891,8 @@ pre code {
     }
 
     .col-md-offset-8 {
-        margin-left: 66.66666667%
+        margin-left: 66.66666667%;
+
     }
 
     .col-md-offset-7 {
@@ -2897,8 +2915,10 @@ pre code {
         margin-left: 25%
     }
 
+    /*=================================================message flash=============================================*/
     .col-md-offset-2 {
-        margin-left: 16.66666667%
+        margin-left: 16.66666667%;
+        margin-top: 40px;
     }
 
     .col-md-offset-1 {
@@ -4070,7 +4090,8 @@ fieldset[disabled] .btn-default.focus {
     color: #ffffff;
     background-color: #2196f3;
     border-color: transparent;
-    margin-top: 50px;
+    margin-top: 20px;
+    margin-left: 22px;
 }
 
 .btn-primary:focus,
@@ -5401,7 +5422,7 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
     float: left;
     height: 64px;
     padding: 20.5px 15px;
-    font-size: 17px;
+    font-size: 10px;
     line-height: 23px;
 }
 
@@ -5780,7 +5801,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
     color: #cccccc
 }
 
-/*=======================================================================Style de la barre de navigation=======================================================================*/
+/*=======================================Style de la barre de navigation=======================================================================*/
 .navbar-inverse {
     position: fixed;
     background-color: #2196f3;
@@ -5795,11 +5816,15 @@ fieldset[disabled] .navbar-default .btn-link:focus {
     /*height: 100%; definit la hauteur*/
 }
 
-/*=======================================================================Style du mot 'Compte Utilisateur'de la barre de navigation=======================================================================*/
+/*=============================Style du mot 'Compte Utilisateur'de la barre de navigation=======================================================================*/
 .navbar-inverse .navbar-brand {
-    color: #b2dbfb
+    color: green;
+    font-size: 12px;
+
+
 }
 
+/*====================================================================================================================*/
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
     color: #ffffff;
@@ -5807,7 +5832,8 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 
 .navbar-inverse .navbar-text {
-    color: #bbbbbb
+    color: #bbbbbb;
+
 }
 
 .navbar-inverse .navbar-nav>li>a {
@@ -5820,11 +5846,13 @@ fieldset[disabled] .navbar-default .btn-link:focus {
     background-color: transparent
 }
 
+/*====================================Style des boutons d'inscription et de connection=========================*/
 .navbar-inverse .navbar-nav>.active>a,
 .navbar-inverse .navbar-nav>.active>a:hover,
 .navbar-inverse .navbar-nav>.active>a:focus {
     color: #ffffff;
-    background-color: #0c7cd5
+    background-color: green;
+    margin-left: 165px;
 }
 
 .navbar-inverse .navbar-nav>.disabled>a,
@@ -6353,7 +6381,7 @@ a.thumbnail.active {
 .alert-success {
     color: #4caf50;
     background-color: #dff0d8;
-    border-color: #d6e9c6
+    border-color: #d6e9c6;
 }
 
 .alert-success hr {
@@ -8316,9 +8344,14 @@ button.close {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3)
 }
 
+
 .navbar-brand {
-    font-size: 24px
+    font-size: 50px;
+
+    /* A ajuster cette valeur selon vos besoins */
 }
+
+
 
 .navbar-inverse .navbar-form input[type=text],
 .navbar-inverse .navbar-form input[type=password] {
@@ -8985,7 +9018,7 @@ input[type="checkbox"]:disabled:checked:after,
 }
 
 .alert-success {
-    background-color: #4caf50
+    background-color: #4caf50;
 }
 
 .alert-info {

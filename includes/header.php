@@ -8,6 +8,15 @@
     <title>INSCRIPTION</title>
     <link rel="stylesheet" href="./css/inscription.css">
     <link rel="shortcut icon" href="./assets/logopers1.png" type="image/png">
+    <style>
+        .navbar-brand {
+            position: relative;
+            margin-left: 1260px;
+            top: 02px;
+            font-size: 14px;
+            /* Vous pouvez ajuster cette valeur selon vos besoins */
+        }
+    </style>
 </head>
 
 <body>
@@ -21,23 +30,38 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Compte Utilisateur</a>
+
             </div>
             <!-- Menu de la barre de navigation-->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">S'enregistrer<span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">Se connecter</a></li>
-                    <!-- <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>   -->
-                </ul>
-                <form class="navbar-form navbar-right"><!-- Mettre le bloc RECHERCHER A DOITE OU GAUCHE-->>
+
+                <form class="navbar-form navbar-left">
+                    <!-- Mettre le bloc RECHERCHER A DOITE OU GAUCHE-->
+                    <button type="submit" class="btn btn-default">Rechercher</button>
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Recherche">
                     </div>
-                    <button type="submit" class="btn btn-default">Rechercher</button>
+
                 </form>
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Forum</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">A propos</a></li>
+                    <li><a href="#">Regles du Forum</a></li>
+
+                </ul>
+
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">S'inscrire<span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">Se connecter</a></li>
+                    <a class="navbar-brand" href="#">Compte</a>
+                </ul>
+
             </div>
         </div>
+
     </nav>
+
 </body>
