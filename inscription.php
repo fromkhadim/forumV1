@@ -1,6 +1,5 @@
 <?php session_start();
 include_once './includes/header.php';
-include_once './includes/login.php'; 
 ?>
 <main>
     <div class="container col-md-8 col-md-offset-2" id="parametres">
@@ -12,7 +11,7 @@ include_once './includes/login.php';
                 <img src="./assets/background.png" height="370" width="399" alt="image">
             </div>
             <!-- ========================================================================================== -->
-            <form action="traiteInscription.php" method="POST" id="inscription">
+            <form action="traiteInscription.php" class="form" method="POST" id="form">
                 <fieldset>
                     <div class="form-group">
                         <label for="prenom">PRENOM</label>
@@ -76,5 +75,6 @@ include_once './includes/login.php';
   ?>
 <!-- ========================================================================================== -->
 </body>
+<script src="script.js"></script>
 
 </html>

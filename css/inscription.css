@@ -19,8 +19,19 @@ html {
     -webkit-text-size-adjust: 100%
 }
 
+/*================================================VARIABLE DE COULEUR==============================================*/
+
+:root {
+    --color-success: #1ec36dd9;
+    --color-second: #f0f0f0;
+    --color-white: #fff;
+    --color-error: #e74c3c;
+}
+
 .body {
     margin: 0;
+
+
 }
 
 /*==========================================================Style de mon logo pers=================================================*/
@@ -52,16 +63,12 @@ body {
     font-size: 13px;
     line-height: 1.846;
     color: #666666;
-    margin-left: 15px;
+    margin-left: 0px;
     margin-top: 70px;
     background-color: black
 }
 
-/*=======================================================Style message d'erreur==================================================================*/
-small {
-    font-size: 50%;
 
-}
 
 /*================================================================Style des labels du formulaire===============================================*/
 .inscription_title,
@@ -71,9 +78,9 @@ label[for="email"],
 label[for="login"],
 label[for="password"],
 label[for="password_bis"] {
-    margin-top: 10px;
-    padding-top: 2px;
-    /* Vous pouvez ajuster cette valeur selon vos besoins */
+    margin-bottom: -2px;
+    /* margin-top: 10px;
+    padding-top: 2px;Vous pouvez ajuster cette valeur selon vos besoins */
 }
 
 /*================================================================Style des labels du formulaire================================================*/
@@ -94,7 +101,7 @@ label {
 .Els {
     text-align: center;
     color: white;
-    margin-bottom: 10px;
+    margin-top: 2px;
 
 }
 
@@ -124,11 +131,12 @@ fieldset {
 .form-control {
     display: block;
     width: 88%;
-    margin-top: 10px;
+    margin-top: 5px;
     /* Espace au-dessus du champ de formulaire */
     margin-bottom: -25px;
     /* Espace entre les champs de formulaire */
-    height: 20px;
+    height: 16px;
+    /*taille de formulaire*/
     padding: 6px 16px;
     font-size: 30px;
     line-height: 0;
@@ -142,21 +150,93 @@ fieldset {
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
+/* Réduction de la taille des étiquettes */
+label {
+    font-size: 12px;
+    /* Ajustez la taille des étiquettes selon vos besoins */
+}
+
+/* Réduction de l'espacement entre les étiquettes et les champs de saisie */
+label,
+.form-control {
+    margin-bottom: -22px;
+    /* Ajustez l'espacement entre les étiquettes et les champs */
+}
+
 /*=======================Style des messages d'erreur dans les champs du formulaire ( les SMALL)===========================================================*/
-small,
-.small {
-    font-size: 92%;
-    margin-left: 400px;
-    text-align: right;
+.fas.fa-user {
+    position: relative;
+    top: 20px;
+    font-size: 24px;
+    /* Changer la taille de l'icône à 24 pixels, ajustez selon vos besoins */
+    margin-left: 10px;
+}
+
+
+
+/*=============================================Style des icones i======================================================*/
+i.fa-exclamation,
+i.fa-check-circle {
+    position: relative;
+    /* Assurez-vous que la position est relative pour utiliser top */
+    top: 5px;
+    /* Déplacez l'icône de 12 pixels vers le bas, ajustez selon vos besoins */
+    font-size: 12px;
+    margin-right: 0px;
     display: block;
-    color: yellow;
-    /*visibility: hidden;*/
+    visibility: hidden;
+    /* Rendre les icônes invisibles */
+}
+
+/*====================================GESTION DES ERREUR PAR LES ICONES==========================================*/
+.champ.error i.fa-exclamation {
+    color: var(--color-error);
     visibility: visible;
 }
 
+.champ.success i.fa-check-circle {
+    color: var(--color-success);
+    visibility: visible;
+}
+
+/*===============================================Style des SMALL==================================================*/
+/* Styles de base pour small et .small */
+small,
+.small {
+    font-size: 92%;
+    position: absolute;
+    margin-left: 400px;
+    text-align: right;
+    display: block;
+    visibility: hidden;
+}
+
+/*=======================================================Style message d'erreur==================================================================*/
+/*small {
+    font-size: 50%;
+
+}
+
+/*===============================================Style gestion des erreurs des  SMALL============================================*/
+/* Styles spécifiques pour small en cas d'erreur */
+.champ.error small,
+.champ.error .small {
+    color: var(--color-error);
+    visibility: visible;
+}
+
+/* Styles spécifiques pour small en cas de succès */
+.champ.success small,
+.champ.success .small {
+    color: var(--color-success);
+    visibility: hidden;
+}
+
+
 /*================================================Style entre les labels et input du formulaire==================================================*/
-.form-group {
-    margin-bottom: -14px;
+.champ {
+    margin-bottom: 0px;
+    /*espace entre deux entrées du form*/
 
 
 }
@@ -468,9 +548,10 @@ th {
         border-top-color: #000 !important
     }
 
-    .label {
-        border: 1px solid #000
-    }
+    /* .label {
+        border: 1px solid #000;
+        
+    }*/
 
     .table {
         border-collapse: collapse !important
@@ -2188,7 +2269,7 @@ pre code {
 /*===============================================Style deu footer================================================================*/
 .row {
     margin-right: -15px;
-    margin-left: -15px
+    margin-left: -15px;
 }
 
 .row-no-gutters {
@@ -2675,6 +2756,7 @@ pre code {
         margin-left: 41.66666667%
     }
 
+
     .col-sm-offset-4 {
         margin-left: 33.33333333%
     }
@@ -2713,8 +2795,53 @@ pre code {
         float: left
     }
 
+
+
+
+
+
+    /*=================================================================================================================*/
+    /*==================================================================================================================*/
+    #parametres {
+        margin-bottom: 35px;
+        /* Ajoutez un espace de xcm en bas du formulaire */
+    }
+
+    /* CSS spécifique au footer */
+    #footer {
+        /* Votre CSS pour le footer */
+        margin-top: 10px;
+    }
+
+    #footer .row {
+        margin-right: -15px;
+        margin-left: -15px;
+        /* Ajoutez d'autres styles de mise en page si nécessaire */
+    }
+
+    #footer .col-md-12 {
+        /* Styles pour la colonne 12 */
+        width: 45%;
+        margin-left: 100px;
+        top: 50px;
+        background-color: white;
+        /* Ajoutez d'autres styles spécifiques à cette colonne si nécessaire */
+    }
+
+    #footer .col-md-6 {
+        /* Styles pour la colonne 6 */
+        width: 20%;
+        margin-left: 25px;
+        top: 50px;
+        background-color: white;
+        /* Ajoutez d'autres styles spécifiques à cette colonne si nécessaire */
+    }
+
+    /*==================================================================================================================*/
+    /*==================================================================================================================*/
+
     /*FOOTER======================================Style pour position de la liste REGLES DU FORUM==========================*/
-    .col-md-12 {
+    /*.col-md-12 {
         width: 45%;
         margin-left: 100px;
         top: 50px;
@@ -2743,13 +2870,14 @@ pre code {
     }
 
     /*FOOTER======================================Style pour position de la liste SUIVER-NOUS===============================================*/
-    .col-md-6 {
+    /*.col-md-6 {
         width: 20%;
         top: 50px;
         background-color: white
     }
 
     /*================================================================================================================*/
+
     .col-md-5 {
         width: 41.66666667%
     }
@@ -4090,7 +4218,7 @@ fieldset[disabled] .btn-default.focus {
     color: #ffffff;
     background-color: #2196f3;
     border-color: transparent;
-    margin-top: 20px;
+    margin-top: 6px;
     margin-left: 22px;
 }
 
@@ -5553,7 +5681,7 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
     .navbar-form .form-control {
         display: inline-block;
         width: auto;
-        vertical-align: middle
+        vertical-align: middle;
     }
 
     .navbar-form .form-control-static {
@@ -5836,8 +5964,9 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 
 }
 
+/*================================Couleur liste de menu barre de navigation===========================================*/
 .navbar-inverse .navbar-nav>li>a {
-    color: #b2dbfb
+    color: white
 }
 
 .navbar-inverse .navbar-nav>li>a:hover,
@@ -5916,6 +6045,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
     background-color: rgba(0, 0, 0, 0.5)
 }
 
+/*============================couleur de bordure de la barre de navigation*/
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
     border-color: #0c84e4

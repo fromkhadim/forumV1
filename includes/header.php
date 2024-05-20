@@ -5,7 +5,8 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INSCRIPTION</title>
+    <title>FORUMCHAT</title>
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css">
     <link rel="stylesheet" href="./css/inscription.css">
     <link rel="shortcut icon" href="./assets/logopers1.png" type="image/png">
     <style>
@@ -56,7 +57,8 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">S'inscrire<span class="sr-only">(current)</span></a></li>
                     <li><a href="#">Se connecter</a></li>
-                    <a class="navbar-brand" href="#">Compte</a>
+                    <!--<a class="navbar-brand" href="#">Compte</a> <i class="fas fa-address-card"></i>-->
+                    <i class="fas fa-user"></i>
                 </ul>
 
             </div>

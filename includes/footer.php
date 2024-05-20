@@ -18,6 +18,38 @@
                 </ul>
             </div>
             <div class="col-md-6">
+                <h4 style="font-size: 12px;">Dernières Discussions</h4>
+                <ul style="font-size: 12px;">
+                    <li><a href="#">Discussion 1</a></li>
+                    <li><a href="#">Discussion 2</a></li>
+                    <li><a href="#">Discussion 3</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h4 style="font-size: 12px;">Dernières Discussions</h4>
+                <ul style="font-size: 12px;">
+                    <li><a href="#">Discussion 1</a></li>
+                    <li><a href="#">Discussion 2</a></li>
+                    <li><a href="#">Discussion 3</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h4 style="font-size: 12px;">Dernières Discussions</h4>
+                <ul style="font-size: 12px;">
+                    <li><a href="#">Discussion 1</a></li>
+                    <li><a href="#">Discussion 2</a></li>
+                    <li><a href="#">Discussion 3</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h4 style="font-size: 12px;">Dernières Discussions</h4>
+                <ul style="font-size: 12px;">
+                    <li><a href="#">Discussion 1</a></li>
+                    <li><a href="#">Discussion 2</a></li>
+                    <li><a href="#">Discussion 3</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
                 <h4 style="font-size: 12px;">Suivez-nous</h4>
                 <ul class="social-icons" style="font-size: 12px;">
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>

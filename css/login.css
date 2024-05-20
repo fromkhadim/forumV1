@@ -1,0 +1,158 @@
+/* Importation de la police Roboto depuis Google Fonts */
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+
+/* Définition des couleurs */
+:root {
+    --color-success: #1ec36dd9;
+    --color-second: #f0f0f0;
+    --color-white: #fff;
+    --color-error: #e74c3c;
+}
+
+/* Réinitialisation des styles */
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Styles de base du corps */
+body {
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.846;
+    color: #666666;
+    margin: 70px 0 0 0;
+    /* Modification de la marge */
+    background-color: black;
+}
+
+/* Styles des étiquettes */
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: -15px;
+    font-weight: 700;
+    font-size: 12px;
+    /* Réduction de la taille des étiquettes */
+    margin-left: 20px;
+    top: 30px;
+    color: blue;
+}
+
+.champ {
+    margin-top: 60px;
+    margin-left: -540px;
+}
+
+/* Styles des champs de formulaire */
+.form-control {
+    display: block;
+    width: 88%;
+    margin-top: 5px;
+    margin-bottom: -25px;
+    height: 16px;
+    padding: 6px 16px;
+    font-size: 30px;
+    line-height: 0;
+    margin-left: 24px;
+    color: white;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+/* Styles des messages d'erreur */
+.small {
+    font-size: 92%;
+    position: absolute;
+    margin-left: 400px;
+    text-align: right;
+    display: block;
+    visibility: hidden;
+}
+
+/* Styles des icônes */
+i.fa-exclamation,
+i.fa-check-circle {
+    position: relative;
+    top: 5px;
+    font-size: 12px;
+    margin-right: 0px;
+    display: block;
+    visibility: hidden;
+}
+
+/* Styles des icônes en cas d'erreur */
+.champ.error i.fa-exclamation {
+    color: var(--color-error);
+    visibility: visible;
+}
+
+/* Styles des icônes en cas de succès */
+.champ.success i.fa-check-circle {
+    color: var(--color-success);
+    visibility: visible;
+}
+
+/* Styles des messages d'erreur en cas d'erreur */
+.champ.error small,
+.champ.error .small {
+    color: var(--color-error);
+    visibility: visible;
+}
+
+/* Styles des messages d'erreur en cas de succès */
+.champ.success small,
+.champ.success .small {
+    color: var(--color-success);
+    visibility: hidden;
+}
+
+/* Styles spécifiques pour le formulaire d'inscription */
+.inscription_title,
+
+label[for="email/login"],
+label[for="password"],
+.Els {
+    margin-bottom: -22px;
+    color: white;
+    text-align: center;
+    /* Styles spécifiques pour certaines étiquettes */
+}
+
+/* Style du fond du formulaire */
+.hero-overview {
+    background: url("../../assets/background.png");
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: -400px;
+}
+
+/* Style du logo */
+.logopers1 {
+    position: absolute;
+    margin-top: 500px;
+}
+
+/* Styles du champ de recherche */
+input[type="search"] {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* Réduction de l'espacement entre les étiquettes et les champs */
+label,
+.form-control {
+    margin-bottom: -22px;
+}
+
+/* POsition boutonde validation*/
+.validation_inscription {
+    margin-left: -550px;
+}

@@ -1,138 +1,160 @@
-<!DOCTYPE html>
-<html lang="en">
+      <!DOCTYPE html>
+      <html lang="fr">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ACCUEIL</title>
-  <!--link rel="shortcut icon" href="./assets/logopers1.png" type="image/png"-->
-  <link rel="stylesheet" href="css/sections/header.css">
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/style.css">
-  <style>
+      <head>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>FORUMCHAT</title>
+          <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+          <link rel="stylesheet" href="./css/accueil.css">
+          <link rel="shortcut icon" href="./assets/logopers1.png" type="image/png">
+          <style>
+          .navbar-brand {
+              position: relative;
+              margin-left: 1260px;
+              top: 02px;
+              font-size: 14px;
+              /* Vous pouvez ajuster cette valeur selon vos besoins */
+          }
+          </style>
+      </head>
 
-  </style>
-</head>
+      <body>
+          <nav class="navbar navbar-inverse">
+              <div class="container-fluid">
+                  <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                      </button>
 
-<body>
-  <header>
-    <div class="logopers1">
-      <img src="./assets/logopers1.png" height="30" width="30" alt="LOGO">
-    </div>
-    <nav class="header__nav">
-      <div class="header__logo"> </div>
-      <div class="header__menu">
-        <button class="header__button"> A PROPOS </button>
-        <button class="header__button"> CONTACTS </button>
-        <button class="header__button"> LIVRES </button>
-        <button class="header__button"> INFOS </button>
-      </div>
-      <div class="header__auth">
-        <button class="header__button">Sign in</button>
-        <a href="inscription.html" class=""><button class="header__button">Sign up</button></a>
+                  </div>
+                  <!-- Menu de la barre de navigation-->
+                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-      </div>
+                      <form class="navbar-form navbar-left">
+                          <!-- Mettre le bloc RECHERCHER A DOITE OU GAUCHE-->
+                          <button type="submit" class="btn btn-default">Rechercher</button>
+                          <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Recherche">
+                          </div>
+                      </form>
+                      <ul class="nav navbar-nav">
+                          <li><a href="#">Accueil</a></li>
+                          <li><a href="#">Forum</a></li>
+                          <li><a href="#">FAQ</a></li>
+                          <li><a href="#">Contact</a></li>
+                          <li><a href="#">A propos</a></li>
+                          <li><a href="#">Regles du Forum</a></li>
 
-      <div class="header__menu-mobile">
+                      </ul>
 
-      </div>
-    </nav>
-  </header>
-  <section class="illustration__video">
-    <div class="video__expo">
-      <video src="./assets/exposition.mp4" height="186" width="300" autoplay muted loop></video>
-    </div>
-    <div class="video__lecture">
-      <video src="./assets/salle_lecture.mp4" height="186" width="300" autoplay muted loop></video>
-    </div>
-    <div class="video__collection">
-      <video src="./assets/collection.mp4" height="400" width="400" autoplay muted loop></video>
-    </div>
+                      <ul class="nav navbar-nav">
+                          <li class="active"><a href="inscription.php">S'inscrire</a> <span
+                                  class="sr-only">(current)</span></li>
 
-  </section>
-  <section class="hero">
-    <div class="hero-overview">
-      <h4 class="hero-overview__title">
-        <span class="dd">ESPACE FORUM</span>:<br>
-        Partage de connaissances <br>discussions et echanges <br>
-
-      </h4>
-    </div>
-    <div class="description__bouton">
-      <div class="description">
-        <p>Rencontrer et discuter<br>avec des amis et collaborateurs
-          en posant des questions <br>et en repondant sur des questions </p>
-      </div>
-      <div class="bouton-et-text">
-        <button class="start">Get Started
-          <img src="assets/arrow-up-right.svg" alt="arrow"></button>
-
-        <div class="livre">
-          <img src="./assets/biblio.jpg" alt="books" height="173px" width="250px">
-        </div>
-
-      </div>
-    </div>
-    <div>
-      <div class="le_bas">
-        <div class="clientell_description__avatar"> <img src="assets/avatars.png" alt="avatars" class="les__clients"
-            height="57x" weight="12px">
-        </div>
+                          <li><a href="login.php">Se connecter</a></li>
 
 
+                          <!--<a class="navbar-brand" href="#">Compte</a> <i class="fas fa-address-card"></i>-->
+                          <i class="fas fa-user"></i>
+                      </ul>
 
-        <div class="custumers">
+                  </div>
+              </div>
 
-          <p> <strong>300,000+</strong><br> Nos utilisateurs actifs dans le monde</p>
-        </div>
-      </div>
-    </div>
-    <div class="clientelle__description__avatar__info">
-      <div class="clientelle">
-        <div class="clientelle_info">
-        </div>
-      </div>
-    </div>
+          </nav>
+          </header>
+          <section class="illustration__video">
+              <div class="video__expo">
+                  <video src="./assets/exposition.mp4" height="186" width="300" autoplay muted loop></video>
+              </div>
+              <div class="video__lecture">
+                  <video src="./assets/salle_lecture.mp4" height="186" width="300" autoplay muted loop></video>
+              </div>
+              <div class="video__collection">
+                  <video src="./assets/collection.mp4" height="400" width="550" autoplay muted loop></video>
+              </div>
+              <div class="hero-overview">
+                  <img src="./assets/background.png" height="370" width="399" alt="image">
+              </div>
 
-    <div class="liste">
-      <ul class="categorie">
-        <div class="info">
-          <h3 class="title">CE QUE NOUS FAISONS</h3><br>
-        </div>
-        <li class="sous__cat1">
-          <div class="titre1">
 
-          </div>
-          <p class="para1">
-            1 Discussions
-          </p>
-        </li>
-        <li class="sous__cat2">
-          <div class="titre2">
+          </section>
+          <section class="hero">
+              <div class="view">
+                  <h4 class="view__title">
+                      <span class="dd">ESPACE FORUM</span><br>
+                      Partage de connaissances <br>discussions et echanges <br>
+                  </h4>
 
-          </div>
-          <p class="para2">
-            2 Echanger et s'entre-aider
-          </p>
-        </li>
-        <li class="sous__cat3">
-          <div class="titre3">
-          </div>
-          <p class="para3">
-            3 Repondre aux questions posées
-          </p>
-        </li>
-        <li class="sous__cat4">
-          <div class="titre4">
-          </div>
-          <p class="para4">
-            4 Partager nos connaissances
-          </p>
-        </li>
-      </ul>
+              </div>
+              <div class="description__bouton">
+                  <div class="description">
+                      <p>Rencontrer et discuter<br>avec des amis et collaborateurs
+                          en posant des questions <br>et en repondant sur des questions </p>
+                  </div>
+                  <div class="bouton-et-text">
+                      <button class="start">Get Started
+                          <img src="assets/arrow-up-right.svg" alt="arrow"></button>
 
-    </div>
-  </section>
-</body>
+                      <div class="livre">
+                          <img src="./assets/biblio.jpg" alt="books" height="173px" width="250px">
+                      </div>
 
-</html>
+                  </div>
+              </div>
+              <div>
+                  <div class="le_bas">
+                      <div class="clientell_description__avatar"> <img src="assets/avatars.png" alt="avatars"
+                              class="les__clients" height="57x" weight="12px">
+                      </div>
+
+
+
+                      <div class="custumers">
+
+                          <p> <strong>300,000+</strong><br> Nos utilisateurs actifs dans le monde</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="clientelle__description__avatar__info">
+                  <div class="clientelle">
+                      <div class="clientelle_info">
+                      </div>
+                  </div>
+              </div>
+
+              <div class="liste">
+                  <ol class="categorie">
+                      <div class="info">
+                          <h3 class="title">CE QUE NOUS FAISONS</h3></br>
+                          <li>
+                              <p class="para1">
+                                  Discussions
+                              </p>
+                          </li>
+                          <li>
+                              <p class="para1">
+                                  Partager nos connaissances
+                      </div>
+                      </li>
+                      <li>
+                          <p class="para1">
+                              Repondre aux questions posées
+                          </p>
+                      </li>
+                      <li>
+                          <p class="para1">
+                              Echanger et s'entre-aider
+                          </p>
+                      </li>
+                  </ol>
+
+              </div>
+          </section>
+      </body>

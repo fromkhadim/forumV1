@@ -1,8 +1,7 @@
+/* Récupération du formulaire */
+const form = document.querySelector("#form");
 
-/* Recuperation du formulaire */
-const inscription_form = document.querySelector("#parametres");
-
-/* Selectionner et recuperer les champs du formulaire */
+/* Sélectionner et récupérer les champs du formulaire */
 const prenom = document.querySelector("#prenom");
 const nom = document.querySelector("#nom");
 const email = document.querySelector("#email");
@@ -10,138 +9,132 @@ const login = document.querySelector("#login");
 const password = document.querySelector("#password");
 const password_bis = document.querySelector("#password_bis");
 
-/* Evenements */
-inscription_form.addEventListener('submit', e => {
-  e.preventDefault(); /* Cette fonction empeche le rechargement du formulaire */
-  inscription_form_verifier(); /* Creation d'une fonction pour verifier tous les champs */
+/* Événement de soumission du formulaire */
+form.addEventListener('submit', e => {
+    /* Cette fonction empêche le rechargement du formulaire */
+    e.preventDefault();
+    formVerifier(); /* Appel de la fonction pour vérifier tous les champs */
 });
-/* Fonctions */
-/* Utilisation de la fonction pour empecher un espace en debut et fin de saisie avec trim() */
-function inscription_form_verifier() {
-  /* Obtenir toutes les valeurs des champs */
-  const prenomValue = prenom.value.trim();
-  const nomValue = nom.value.trim();
-  const emailValue = email.value.trim();
-  const loginValue = login.value.trim();
-  const passwordValue = password.value.trim();
-  const password_bisValue = password_bis.value.trim();
-  //------------------------------------VERIFICATION PRENOM-----------------------------------------------------------------------------------------------
-  if (prenomValue === "") {
-    let message = "Donner votre prenom";
-    setError(prenom, message);//fonction qu'il faut appeler en cas d'erreur
 
-  } else {
-    setSuccess(prenom);//fonction qu'il faut appeler en cas de succès de l'EMAIL
-  }
-  //------------------------------------VERIFICATION NOM-----------------------------------------------------------------------------------------------
-  if (nomValue === "") {
-    let message = "Donner votre nom";
-    setError(nom, message);//fonction qu'il faut appeler en cas d'erreur
+/* Fonction de vérification des champs du formulaire */
+function formVerifier() {
+    /* Obtention de toutes les valeurs des champs */
+    const prenomValue = prenom.value.trim();
+    const nomValue = nom.value.trim();
+    const emailValue = email.value.trim();
+    const loginValue = login.value.trim();
+    const passwordValue = password.value.trim();
+    const password_bisValue = password_bis.value.trim();
 
-  } else {
-    setSuccess(nom);//fonction qu'il faut appeler en cas de succès de l'EMAIL
-  }
-  //------------------------------------VERIFICATION DE L'ADRESSE MAIL-----------------------------------------------------------------------------------------------
-  if (emailValue === "") {
-    let message = "le champ EMAIL ne doit pas etre vide";
-    setError(email, message);//fonction qu'il faut appeler en cas d'erreur
-
-  } else if (!verifierEmail(emailValue)) {
-    let message = "Votre EMail n'est pas valable";
-    setError(email, message);//fonction qu'il faut appeler en cas d'erreur de email
-  } else {
-    setSuccess(email);//fonction qu'il faut appeler en cas de succès de l'EMAIL
-  }
-  //----------------------------------VERIFICATION DU LOGIN---------------------------------------------------------------------------------------------
-  // Vérifier si le champ login est vide
-  if (loginValue === "") {
-    let message = "Le champ login ne doit pas être vide";
-    setError(login, message); // fonction qu'il faut appeler en cas d'erreur
-  } else {
-    // Vérifier que le login commence par une lettres
-    if (!loginValue.match(/^[A-Za-z]/)) {
-      let message = "Le champ login doit commencer par une lettre";
-      setError(login, message); // fonction qu'il faut appeler en cas d'erreur
+    // Vérification du champ prénom
+    if (prenomValue === "") {
+        let message = "Prénom requis";
+        setError(prenom, message);
+         } else if (!/^[A-Za-z]/.test(prenomValue)) {
+            let message = "Le prenom doit commencer par une lettre";
+            setError(prenom, message); 
     } else {
-      // Vérifier que le login a au moins 5 caractères
-      let letterNum = loginValue.length;
-      if (letterNum < 5) {
-        let message = "Le champ login doit comporter au moins 5 caractères";
-        setError(login, message); // fonction qu'il faut appeler en cas d'erreur
-      } else {
-        setSuccess(login); // fonction qu'il faut appeler en cas de succès du login
-      }
+        setSuccess(prenom);
     }
-  }
-  //-------------------------------------------------VERIFICATION MOT DE PASSE-----------------------------------------------------------------
-  if (passwordValue === "") {
-    let message = "le champ mot de passe ne doit pas etre vide";
-    setError(password, message);//fonction qu'il faut appeler en cas d'erreur mot de passe
-  } else if (!verifierMotDePasse(passwordValue)) {
-    let message = "Votre mot de passe avec lettres,chiffres,caracteres spéciaux au moins 4 caractères)";
-    setError(password, message);//fonction qu'il faut appeler en cas d'erreur mot de passe
-  } else {
-    setSuccess(password);//fonction qu'il faut appeler en cas de succès mot de passe
-  }
 
+    // Vérification du champ nom
+    if (nomValue === "") {
+        let message = "Nom requis";
+        setError(nom, message);
+        } else if (!/^[A-Za-z]/.test(nomValue)) {
+            let message = "Le nom doit commencer par une lettre";
+            setError(nom, message);
+    } else {
+        setSuccess(nom);
+    }
 
-  //---------------------------------------------------VERIFICATION MOT DE PASSE DE CONFIRMATION--------------------------------------------------------
-  if (password_bisValue === "") {
-    let message = "Confirmer mot de passe";
-    setError(password_bis, message);//fonction qu'il faut appeler en cas d'erreur mot de passe
-  } else if (password_bisValue !== passwordValue) {
-    let message = "les deux mots de passe ne correspondent pas";
-    setError(password_bis, message);
-  } else {
-    setSuccess(password_bis);
-  }
+    // Vérification du champ email
+    if (emailValue === "") {
+        let message = "Email requis";
+        setError(email, message);
+    } else if (!verifierEmail(emailValue)) {
+        let message = "Adresse email non valide";
+        setError(email, message);
+    } else {
+        setSuccess(email);
+    }
+
+    // Vérification du champ login
+    if (loginValue === "") {
+        let message = "Login requis";
+        setError(login, message);
+    } else if (!loginValue.match(/^[A-Za-z]/)) {
+        let message = "Le login doit commencer par une lettre";
+        setError(login, message);
+    } else if(loginValue.length < 5) {
+        let message = "Le login doit comporter au moins 5 caractères";
+        setError(login, message);
+    } else {
+        setSuccess(login);
+    }
+
+    // Vérification du champ mot de passe
+    if (passwordValue === "") {
+        let message = "Mot de passe requis";
+        setError(password, message);
+    } else if (!verifierMotDePasse(passwordValue)) {
+        let message = "Votre mot de passe doit contenir au moins 8 caractères incluant des lettres, chiffres et caractères spéciaux";
+        setError(password, message);
+    } else {
+        setSuccess(password);
+    }
+
+    // Vérification du champ de confirmation de mot de passe
+    if (password_bisValue === "") {
+        let message = "Confirmation de mot de passe requis";
+        setError(password_bis, message);
+    } else if (password_bisValue !== passwordValue) {
+        let message = "Les mots de passe ne correspondent pas";
+        setError(password_bis, message);
+    } else {
+        setSuccess(password_bis);
+    }
 }
-//---------------------------------------------------------------------------------------------------------------------------------------------------------
+/*======================================================Fonction qui gère l'email================= =================================================*/ 
 
-
-
-
-//-----------------------------Creation d'une fonction verifierEmail() qui vérifie l'adresse mail(1ère etape)------------------------------------
-
-//Creation d'une methode test() qui renvoie un boolean (2ème étape)
-//la fonction verifier Email() retourne  l'expression regulière d'une adresse email
-//La  methode test() renvoie true or false
-//La methode test verifie si la saisie de utilisateur répond à la règle de l'adresse mail defini
-//function verifierEmail(email) {
-//return /^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/.test(email);}
+/* Fonction pour vérifier l'adresse email */
 function verifierEmail(email) {
-  return /^[^@]+@[^@]+\.[a-z]{2,4}$/.test(email);
+    return /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]{2,}\.[a-zA-Z]{2,4}$/.test(email);
+} 
+/*======================================================Fonction qui gère le login======================================================================*/ 
+
+/* En cas d'erreur */
+function setError(elem, message) {
+    const champ = elem.parentElement;
+    const small = champ.querySelector('small');
+    small.innerText = message;
+    champ.className = "champ error";
 }
-
-//--------------------------Création de fonctions setError()pour             verifier LOGIN INVALIDE----------------------------------------------------------
-
-function setError(elem, message) //fonction qu'il faut appeler en cas d'erreur login invalide(paramètre 'elem' et 'message')
-{
-  const champ = elem.parentElement;// creation d'une variable 'champ'pour recuperer le parent de l'élément 'elem'
-  const small = champ.querySelector('small');//récupération à travers 'champ' de 'small' du message d'erreur pour son affichage
-  small.innerText = message;//Ajouter le  message d'erreur indiquannt que le login est invalide
-  champ.className = "champ error";//Ajouter la classe error et fin verification champ login (resultat error)
-}
-//--------------------------Création de fonctions  setSuccess() pour         verifier LOGIN VALIDE------------------------------------------------------------------------------------
-
-function setSuccess(elem) {//fonction qu'il faut appeler en cas de login valide(paramètre 'elem')
-  const champ = elem.parentElement; // creation d'une variable 'champ'pour recuperer le parent de l'élément 'elem'
-  champ.className = "champ success";//Ajouter la classe success et fin verification champ login(resultat succes)
-}
-
-
-
-//-----------------------------Creation d'une fonction verifierMotDePasse() qui vérifie le mot de passe(1ère etape)------------------------------------
-
-//Creation d'une methode test() qui renvoie un boolean (2ème étape)
-//la fonction verifierMotDePasse() retourne  l'expression regulière d'un mot de passe defini selon le besoin
-//La  methode test() renvoie true or false
-//La methode test verifie si la saisie de utilisateur répond à la règle du mot de passe defini 
-//function verifierMotDePasse(password) {
-// return /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,12}$/.test(password);}
+/*En cas de succès*/
+function setSuccess(elem) {
+    const champ = elem.parentElement;
+    champ.className = "champ success";
+ }
+/*======================================================Fonction qui gère le mot de passe================= =================================================*/
 function verifierMotDePasse(password) {
-  return /^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{4,}$/.test(password);
+    return /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,12}$/.test(password);
+    /*tout caractere //suivi de chiffre //suivi de caracteres speciaux //entre 8et 12 caracteres*/
+    
+    /*   Abcdefg1!
+         Password123@
+         !@12aBcD        */
 }
-//   regle mot de passe:      /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8, 12}$/   (lettre,chiffre,caracteres speciaux)
+
+ 
 
 
+
+
+
+
+
+
+
+
+
+/*=====================================================================================================================================================*/ 

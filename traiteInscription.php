@@ -1,5 +1,5 @@
 <?php 
-    session_start();
+session_start();
     include_once './includes/functions.php'; ?>
 <?php
       // ==================================================DEFINITION VARIABLES DE CONNECTION A LA BASE DE DONNEES======================================
@@ -71,7 +71,7 @@
             $stmt = $conn->prepare($sql);
             $password = password_hash($_POST['password'] , PASSWORD_BCRYPT);//Pour cripter le mot de passe
             
-          $token = generateToken(100);
+            $token = generateToken(100);
           
             $stmt->execute([$_POST['prenom'],$_POST['nom'],$_POST['email'],$_POST['login'],$password,$token]);
             $userId = $conn->lastInsertId();
@@ -91,6 +91,3 @@
             }
         }
       
-
-          
-        
