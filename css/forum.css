@@ -1,3 +1,4 @@
+/*=========================================================BARRE DE NAVIGATION ============================================================*/
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
 
 html {
@@ -21,9 +22,12 @@ html {
 }
 
 fieldset {
-    margin: 0;
-    padding: 0.35em 0.625em 0.75em;
-    margin-top: 0;
+    min-width: 0;
+    margin-top: 204px;
+    border: 0;
+    align-items: center;
+    margin-bottom: 12px;
+    margin-left: 250px;
 }
 
 body {
@@ -33,30 +37,38 @@ body {
     color: #666666;
     margin-left: 0;
     margin-top: 70px;
-    background-color: black;
+    background-color: white;
 }
 
-
-
 .inscription_title,
-label[for="prenom"],
-label[for="nom"],
 label[for="email"],
 label[for="login"],
-label[for="password"],
-label[for="password_bis"] {
+label[for="password"] {
     margin-bottom: -2px;
 }
 
+.hero-overview_image {
+    background: url("../assets/background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    height: 40px;
+    margin-left: -370px;
+    width: 6px;
+    margin-bottom: -250px;
+    margin-top: 100px;
+    z-index: -1;
+}
+
 label {
-    display: inline-block;
+    display: block;
     max-width: 100%;
     margin-bottom: -15px;
     font-weight: 700;
     font-size: 100%;
     margin-left: 20px;
     top: 30px;
-    color: blue;
+    color: white;
 }
 
 .Els {
@@ -70,25 +82,18 @@ input[type="search"] {
     appearance: none;
 }
 
-fieldset {
-    min-width: 0;
-    padding: 0;
-    margin: 0;
-    border: 0;
-    align-items: center;
-}
-
 .form-control {
     display: block;
-    width: 88%;
+    width: 81%;
     margin-top: 5px;
-    margin-bottom: -25px;
+    margin-bottom: 25;
+    margin-bottom: 25;
     height: 16px;
     padding: 6px 16px;
     font-size: 30px;
     line-height: 0;
     margin-left: 24px;
-    color: white;
+    color: blue;
     background-color: transparent;
     background-image: none;
     border: transparent solid 1px;
@@ -103,7 +108,7 @@ label {
 
 label,
 .form-control {
-    margin-bottom: -22px;
+    margin-bottom: 0px;
 }
 
 .fas.fa-user {
@@ -1735,10 +1740,11 @@ h6 .small,
 
 h1,
 .h1 {
-    font-size: 50px;
+    font-size: 40px;
     color: white;
-    margin-top: -40px;
-    margin-left: 180px;
+    margin-top: 42px;
+    margin-bottom: -120px;
+    margin-left: 230px;
     text-align: left;
 }
 
@@ -9070,7 +9076,7 @@ input[type="checkbox"]:disabled:checked:after,
 
 * {
     margin: 0;
-    padding: 0;
+    padding: 0px;
     box-sizing: border-box;
 }
 
@@ -9081,170 +9087,29 @@ body {
     overflow-x: hidden;
 }
 
-/*====================================================================================================================*/
-/*====================================================================================================================*/
-/*====================================================================================================================*/
-/*====================================================================================================================*/
+/*=======================================================LE PIED DE PAGE===================================================================*/
 
-
-/*============================================PAGE D'ACCUEIL DU SITE===================================================*/
-.clientell_description__avatar {
-    position: absolute;
-    left: 36%;
-    transform: translateX(-30%);
-    bottom: 4px;
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 0px 0;
+    text-align: center;
 }
 
-.hero-overview_image {
-    background: url("../../assets/background.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 400px;
-    width: 650px;
-    margin-bottom: 150px;
-    margin-top: -50px;
-    /* Ajustez cette valeur pour remonter l'image */
+footer h4 {
+    color: red;
+    display: inline-block;
+    vertical-align: top;
+    /* Assure l'alignement vertical */
+    margin-right: 20px;
+    /* Ajoute une marge à droite entre les éléments */
 }
 
-.dd {
-    position: relative;
-    top: 200px;
-    font-family: var(--roboto);
-    color: white;
-    font-weight: bold;
-    font-size: 40px;
-}
-
-.mon_logo {
-    position: absolute;
-    left: 0%;
-    top: 66px;
-
-}
-
-.custumers {
-    position: absolute;
-    left: 47%;
-    transform: translateX(-40%);
-    bottom: 20px;
-}
-
-.description__bouton {
-    position: absolute;
-    left: 200px;
-    transform: translateX(-40%);
-    bottom: 50px;
-
-}
-
-.description {
-    position: absolute;
-    left: 150px;
-    transform: translateX(-40%);
-    bottom: 50px;
-
-}
-
-.livre {
-    position: absolute;
-    left: 680px;
-    transform: translateX(-39%);
-    bottom: -45px;
-}
-
-.info {
-    position: absolute;
-    left: 45%;
-    transform: translateX(-40%);
-    top: 120px;
-    display: flex;
-    flex-direction: column;
-    /* Alignement vertical des éléments de la liste */
-}
-
-.liste {
-    position: absolute;
-    left: 45%;
-    transform: translateX(-40%);
-    bottom: 350px;
-    top: 150px;
-    display: flex;
-    flex-direction: column;
-    /* Alignement vertical des éléments de la liste */
-}
-
-.categorie {
-    display: flex;
-    flex-direction: column;
-    /* Alignement vertical des éléments de la liste */
+footer ul {
     list-style-type: none;
-    /* Supprimer les puces devant les éléments de la liste */
-    margin-top: 20px;
-    /* Ajouter une marge en haut de la liste */
+    padding-left: 0;
 }
-
-.sous__cat1,
-.sous__cat2,
-.sous__cat3,
-.sous__cat4 {
-    display: flex;
-    align-items: center;
-    /* Alignement vertical des éléments internes */
-    margin-bottom: 5px;
-    /* Réduire l'espace entre les éléments */
-}
-
-.titre1,
-.titre2,
-.titre3,
-.titre4 {
-    width: 10px;
-    /* Largeur des div de titre */
-    height: 10px;
-    /* Hauteur des div de titre */
-    background-color: lightblue;
-    /* Couleur de fond pour illustrer */
-    margin-right: 10px;
-    /* Espacement entre le titre et le paragraphe */
-}
-
-.video__expo {
-    position: absolute;
-    left: 86%;
-    transform: translateX(-40%);
-    bottom: -5px;
-}
-
-.video__collection {
-    position: absolute;
-    left: 75%;
-    transform: translateX(-40%);
-    bottom: 192px;
-}
-
-.video__lecture {
-    position: absolute;
-    left: 40%;
-    transform: translateX(-40%);
-    bottom: 120px;
-}
-
-.start {
-    position: absolute;
-    left: 200px;
-    height: 50px;
-    width: 100px;
-    transform: translateX(-40%);
-    bottom: -40px;
-    color: white;
-    background-color: blue;
-}
-
-
-
-
-
-/*====================================================================================================================*/
-/*====================================================================================================================*/
-/*====================================================================================================================*/
-/*====================================================================================================================*/

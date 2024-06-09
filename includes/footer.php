@@ -61,7 +61,7 @@
         </div>
     </div>
 </footer>
-<link rel="stylesheet" href="./css/inscription.css">
+<link rel="stylesheet" href="#">
 <link rel="shortcut icon" href="./assets/logopers1.png" type="image/png">
 
 </body>

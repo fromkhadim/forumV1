@@ -1,138 +1,162 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php 
+include_once './includes/header.html';
+?>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ACCUEIL</title>
-  <link rel="shortcut icon" href="./assets/logopers1.png" type="image/png">
-  <link rel="stylesheet" href="css/sections/header.css">
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/style.css">
-  <style>
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./css/index.css">
 
-  </style>
 </head>
 
 <body>
-  <header>
-    <div class="logopers1">
-      <img src="./assets/logopers1.png" height="30" width="30" alt="LOGO">
-    </div>
-    <nav class="header__nav">
-      <div class="header__logo"> </div>
-      <div class="header__menu">
-        <button class="header__button"> A PROPOS </button>
-        <button class="header__button"> CONTACTS </button>
-        <button class="header__button"> LIVRES </button>
-        <button class="header__button"> INFOS </button>
-      </div>
-      <div class="header__auth">
-        <button class="header__button">Sign in</button>
-        <a href="inscription.html" class=""><button class="header__button">Sign up</button></a>
+    <header>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
 
-      </div>
+                </div>
+                <!-- Menu de la barre de navigation-->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-      <div class="header__menu-mobile">
+                    <form class="navbar-form navbar-left">
+                        <!-- Mettre le bloc RECHERCHER A DOITE OU GAUCHE-->
+                        <button type="submit" class="btn btn-default">Rechercher</button>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Recherche">
+                        </div>
 
-      </div>
-    </nav>
-  </header>
-  <section class="illustration__video">
-    <div class="video__expo">
-      <video src="./assets/exposition.mp4" height="186" width="300" autoplay muted loop></video>
-    </div>
-    <div class="video__lecture">
-      <video src="./assets/salle_lecture.mp4" height="186" width="300" autoplay muted loop></video>
-    </div>
-    <div class="video__collection">
-      <video src="./assets/collection.mp4" height="400" width="400" autoplay muted loop></video>
-    </div>
+                    </form>
 
-  </section>
-  <section class="hero">
-    <div class="hero-overview">
-      <h4 class="hero-overview__title">
-        <span class="dd">ESPACE FORUM</span>:<br>
-        Partage de connaissances <br>discussions et echanges <br>
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="./Forum.php">Forum</a></li>
+                        <li><a href="./Faq.php">FAQ</a></li>
+                        <li><a href="./contact.php">Contact</a></li>
+                        <li><a href="./A propos.php">A propos</a></li>
+                        <li><a href="./Regles du forum.php">Regles du Forum</a></li>
 
-      </h4>
-    </div>
-    <div class="description__bouton">
-      <div class="description">
-        <p>Rencontrer et discuter<br>avec des amis et collaborateurs
-          en posant des questions <br>et en repondant sur des questions </p>
-      </div>
-      <div class="bouton-et-text">
-        <button class="start">Get Started
-          <img src="assets/arrow-up-right.svg" alt="arrow"></button>
+                    </ul>
 
-        <div class="livre">
-          <img src="./assets/biblio.jpg" alt="books" height="173px" width="250px">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="./inscription.php">S'inscrire<span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li><a href="./login.php">Se connecter</a></li>
+                        <!--<a class="navbar-brand" href="#">Compte</a> <i class="fas fa-address-card"></i>-->
+                        <i class="fas fa-user"></i>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+
+    </header>
+    <section class="illustration__video">
+        <div class="video__expo">
+            <video src="./assets/exposition.mp4" height="186" width="300" autoplay muted loop></video>
+        </div>
+        <div class="video__lecture">
+            <video src="./assets/salle_lecture.mp4" height="186" width="300" autoplay muted loop></video>
+        </div>
+        <div class="video__collection">
+            <video src="./assets/collection.mp4" height="400" width="400" autoplay muted loop></video>
         </div>
 
-      </div>
-    </div>
-    <div>
-      <div class="le_bas">
-        <div class="clientell_description__avatar"> <img src="assets/avatars.png" alt="avatars" class="les__clients"
-            height="57x" weight="12px">
+    </section>
+    <section class="hero">
+
+        <div class="hero-overview">
+            <h4 class="hero-overview__title">
+                <span class="dd">ESPACE FORUM <br>Partage de connaissances <br>discussions et echanges <br>
+                </span> <br>
+
+            </h4>
         </div>
-
-
-
-        <div class="custumers">
-
-          <p> <strong>300,000+</strong><br> Nos utilisateurs actifs dans le monde</p>
+        <div class="hero-overview_image">
+            <img src="./assets/background.png" height="370" width="399" alt="image">
         </div>
-      </div>
-    </div>
-    <div class="clientelle__description__avatar__info">
-      <div class="clientelle">
-        <div class="clientelle_info">
+        <div class="description">
+            <p>Rencontrer et discuter<br>avec des amis et collaborateurs
+                en posant des questions <br>et en repondant sur des questions </p>
         </div>
-      </div>
-    </div>
+        <div class="description__bouton">
 
-    <div class="liste">
-      <ul class="categorie">
+            <div class="bouton-et-text">
+                <button class="start">Get Started
+                    <img src="assets/arrow-up-right.svg" alt="arrow"></button>
+
+                <div class="livre">
+                    <img src="./assets/biblio.jpg" alt="books" height="173px" width="250px">
+                </div>
+
+            </div>
+        </div>
+        <div>
+            <div class="le_bas">
+                <div class="clientell_description__avatar"> <img src="assets/avatars.png" alt="avatars"
+                        class="les__clients" height="57x" weight="12px">
+                </div>
+
+
+
+                <div class="custumers">
+
+                    <p> <strong>300,000+</strong><br> Nos utilisateurs actifs dans le monde</p>
+                </div>
+            </div>
+        </div>
+        <div class="clientelle__description__avatar__info">
+            <div class="clientelle">
+                <div class="clientelle_info">
+                </div>
+            </div>
+        </div>
         <div class="info">
-          <h3 class="title">CE QUE NOUS FAISONS</h3><br>
+            <h3 class="title">CE QUE NOUS FAISONS</h3><br>
         </div>
-        <li class="sous__cat1">
-          <div class="titre1">
+        <div class="liste">
+            <ul class="categorie">
+                <li class="sous__cat1">
+                    <div class="titre1">
 
-          </div>
-          <p class="para1">
-            1 Discussions
-          </p>
-        </li>
-        <li class="sous__cat2">
-          <div class="titre2">
+                    </div>
+                    <p class="para1">
+                        1 Discussions
+                    </p>
+                </li>
+                <li class="sous__cat2">
+                    <div class="titre2">
 
-          </div>
-          <p class="para2">
-            2 Echanger et s'entre-aider
-          </p>
-        </li>
-        <li class="sous__cat3">
-          <div class="titre3">
-          </div>
-          <p class="para3">
-            3 Repondre aux questions posées
-          </p>
-        </li>
-        <li class="sous__cat4">
-          <div class="titre4">
-          </div>
-          <p class="para4">
-            4 Partager nos connaissances
-          </p>
-        </li>
-      </ul>
+                    </div>
+                    <p class="para2">
+                        2 Echanger et s'entre-aider
+                    </p>
+                </li>
+                <li class="sous__cat3">
+                    <div class="titre3">
+                    </div>
+                    <p class="para3">
+                        3 Repondre aux questions posées
+                    </p>
+                </li>
+                <li class="sous__cat4">
+                    <div class="titre4">
+                    </div>
+                    <p class="para4">
+                        4 Partager nos connaissances
+                    </p>
+                </li>
+            </ul>
 
-    </div>
-  </section>
+        </div>
+    </section>
 </body>
 
 </html>

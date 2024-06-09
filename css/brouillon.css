@@ -1,0 +1,186 @@
+.fas.fa-user {
+    position: relative;
+    top: 20px;
+    font-size: 24px;
+    margin-left: 100px;
+}
+
+/* Style du menu (liste) de la barre de navigation */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: -40px;
+    margin-left: 600px;
+    /* Ajustez cette valeur pour rapprocher le menu de la barre de navigation */
+    vertical-align: top;
+    /* Ajoutez cette ligne pour aligner verticalement */
+}
+
+
+
+/* Style barre de navigation */
+.navbar-inverse {
+    position: fixed;
+    background-color: #2196f3;
+    top: 0;
+    margin-left: 0;
+    width: 100%;
+    height: 80px;
+    /* Nouvelle hauteur */
+    border-color: transparent;
+}
+
+/*Style bouton Se connecter en hover*/
+.navbar-inverse .navbar-nav>li>a:hover,
+.navbar-inverse .navbar-nav>li>a:focus {
+    color: #ffffff;
+    background-color: transparent;
+    cursor: pointer;
+
+    .btn-link:active {
+        background-color: #e0e0e0;
+        background-image: radial-gradient(circle, #e0e0e0 10%, #fff 11%);
+        background-repeat: no-repeat;
+        background-size: 1000% 1000%;
+        box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.4);
+
+    }
+
+}
+
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:hover,
+.navbar-inverse .navbar-nav>.active>a:focus {
+    color: #ffffff;
+    background-color: ye;
+    margin-left: -50px;
+
+}
+
+/*Style au passage de la souris*/
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/*Style pour mettre le menu en ligne*/
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+    /*entre éléments menu*/
+}
+
+/*Style bouton rechercher de la barre de navigation*/
+.btn-default {
+    color: black;
+    text-transform: uppercase;
+    background-color: #e6e6e6;
+    border-color: transparent;
+    margin-top: 10px;
+    margin-left: 45px;
+    width: 120px;
+    /* Largeur du bouton en pixels */
+    height: 40px;
+    /* Hauteur du bouton en pixels */
+}
+
+/*Style bouton rechercher de la barre de navigation*/
+.btn-default:hover {
+    color: #444444;
+    background-color: #e6e6e6;
+    border-color: rgb(0, 0, 0, 0);
+
+}
+
+
+/*Style des élément(lien) à l'interieur des listes*/
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    background-color: red;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+body {
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.846;
+    color: #666666;
+    margin-left: 0;
+    margin-top: 70px;
+    background-color: black
+}
+
+/*=================================================STYLE DE LA PARTIE RECHERCHE BARRE DE NAVIGATION==========================================================================*/
+/* Réinitialiser les styles de l'input */
+input[type="text"].form-control {
+    background-color: transparent;
+    /* Rendre l'arrière-plan transparent */
+    border: none;
+    /* Supprimer la bordure */
+    margin-left: 10px;
+    outline: none;
+    /* Supprimer l'outline */
+    position: relative;
+    z-index: 1;
+}
+
+/* Placeholder style */
+input[type="text"].form-control::placeholder {
+    color: #fff;
+    /* Couleur du texte du placeholder */
+    font-size: 16px;
+
+    font-style: italic;
+    /* Style de police */
+}
+
+/* Styles spécifiques à la barre de navigation */
+.navbar-inverse .navbar-form input[type="text"].form-control,
+.navbar-inverse .navbar-form input[type="password"].form-control {
+    color: #fff;
+    box-shadow: 0 -1px 0 #b2dbfb inset;
+    /* Ajouter d'autres styles spécifiques si nécessaire */
+}
+
+/*===================================================================================================================================*/
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+    border-color: #0c84e4;
+}
+
+/*===============================================STYLE DE LA PARTIE FORMULAIRE DE CONNECTION==================================================*/
+/* Réinitialiser les styles de l'input */
+input[type="username"].form-control,
+input[type="password"].form-control {
+    background-color: transparent;
+    /* Rendre l'arrière-plan transparent */
+    border: none;
+    /* Supprimer la bordure */
+    outline: none;
+    /* Supprimer l'outline */
+    position: relative;
+    z-index: 1;
+}
+
+/* Placeholder style */
+input[type="username"].form-control::placeholder,
+input[type="password"].form-control::placeholder {
+    color: #fff;
+    /* Couleur du texte du placeholder */
+    font-size: 16px;
+    font-style: italic;
+    /* Style de police */
+}
+
+/* Styles spécifiques à la barre de navigation */
+.navbar-inverse .navbar-form input[type="username"].form-control,
+.navbar-inverse .navbar-form input[type="password"].form-control {
+    color: #fff;
+    box-shadow: 0 -1px 0 #b2dbfb inset;
+    /* Ajouter d'autres styles spécifiques si nécessaire */
+}
